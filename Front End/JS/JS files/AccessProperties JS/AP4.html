@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter Setter Counter</title>
+    <style>
+         body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            background-color: #e3f2fd; /* Light blue */
+        }
+
+        #counterDisplay {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #1565c0; /* Dark blue */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #2196f3; /* Blue */
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1976d2; /* Darker blue */
+        }
+
+         pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-top: 20px;
+         }
+    </style>
+</head>
+<body>
+
+    <h1>Counter with Getter and Setter</h1>
+
+    <div id="counterDisplay">0</div>
+
+    <button id="incrementButton">Increment Count</button>
+
+    
+
+
+    <script>
+        // Define the counter object with getter and setter
+        const counter = {
+            _count: 0, // Private internal variable (convention using underscore)
+
+            // Getter to access the count
+            get value() {
+                console.log("Getter called. Current count:", this._count);
+                return this._count;
+            },
+
+            // Setter to modify the count
+            set value(newValue) {
+                console.log("Setter called with new value:", newValue);
+                // Basic validation
+                if (typeof newValue === 'number' && newValue >= 0) {
+                    this._count = newValue;
+                    // Update the display whenever the value is set
+                    document.getElementById('counterDisplay').textContent = this._count;
+                } else {
+                    console.warn("Invalid value for counter:", newValue);
+                }
+            }
+        };
+
+        // Get the increment button
+        const incrementButton = document.getElementById('incrementButton');
+
+        // Add click event listener to increment the counter using the setter
+        incrementButton.addEventListener('click', function() {
+            // Increment the counter's value using the setter
+            counter.value = counter.value + 1; // This calls the getter first, then the setter
+            console.log("Button clicked. Counter value is now:", counter.value);
+        });
+
+        // Initialize the display with the initial value
+        counter.value = 0; // Use the setter to initialize and update display
+
+        console.log("Getter/Setter Counter script loaded.");
+    </script>
+
+</body>
+</html>

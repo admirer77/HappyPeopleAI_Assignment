@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility and Display Properties</title>
+    <link rel="stylesheet" href="PA2.css">
+</head>
+<body>
+
+    <h1>Visibility and Display Properties</h1>
+
+    <h2>Visibility Examples</h2>
+    <div class="box visible">Visible Box</div>
+    <div class="box hidden">Hidden Box (Space Reserved)</div>
+    <div class="box visible">Another Visible Box</div>
+    <div class="box collapse">Collapse Box (Often like Hidden)</div>
+     <div class="box visible">Yet Another Visible Box</div>
+
+
+    <h2>Display Examples</h2>
+    <p>This is an <span class="display-inline">Inline Span</span> element.</p>
+    <div class="box display-block">Block Box</div>
+    <p>This is another paragraph.</p>
+    <div class="box display-none">None Box (Completely Gone)</div>
+     <div class="box display-block">Another Block Box</div>
+
+    <h2>Display: Contents Example</h2>
+    <div class="contents-parent">
+        <div class="contents-child">Child 1</div>
+        <div class="contents-child">Child 2</div>
+        <div class="contents-child display-contents">
+            <span class="contents-child">Grandchild A</span>
+            <span class="contents-child">Grandchild B</span>
+        </div>
+        <div class="contents-child">Child 3</div>
+    </div>
+    <p>Notice how the 'Grandchild' spans appear directly under the dashed purple border, as if their parent `.display-contents` div wasn't there.</p>
+
+
+    <h2>Display: List-Item Example</h2>
+    <div class="box display-list-item">List Item Box 1</div>
+    <div class="box display-list-item">List Item Box 2</div>
+
+
+</body>
+</html>

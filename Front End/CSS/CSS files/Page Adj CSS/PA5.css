@@ -1,0 +1,41 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    /* Using placeholder images for demonstration */
+    background-image:
+        url('https://placehold.co/100x100/ff0000/white?text=Img1'), /* Red square */
+        url('https://placehold.co/150x150/00ff00/white?text=Img2'), /* Green square */
+        url('https://placehold.co/200x200/0000ff/white?text=Img3'); /* Blue square */
+    background-repeat: no-repeat; /* Prevent images from repeating */
+    background-position:
+        top left, /* Position the first image */
+        center center, /* Position the second image */
+        bottom right; /* Position the third image */
+    background-size:
+        100px 100px, /* Size for the first image */
+        contain, /* Size for the second image: scale to fit container */
+        auto 200px; /* Size for the third image: auto width, 200px height */
+    background-color: #f0f0f0; /* Fallback background color */
+    min-height: 150vh; /* Ensure enough height to see all images positioned */
+}
+
+.element-with-multiple-bgs {
+    width: 80%;
+    height: 300px;
+    margin: 50px auto;
+    border: 2px dashed black;
+    background-image:
+         url('https://placehold.co/50x50/ff9900/white?text=ElemImg1'), /* Orange square */
+         url('https://placehold.co/70x70/9900ff/white?text=ElemImg2'); /* Purple square */
+    background-repeat: repeat-x, repeat-y; /* Repeat first image horizontally, second vertically */
+    background-position: top, left; /* Position first image at top, second at left */
+    background-size: 50px 50px, 70px 70px; /* Specific sizes for element backgrounds */
+    background-color: #ffe0b2; /* Element background color */
+    padding: 20px;
+    text-align: center;
+}
+
+ h1, p {
+     text-align: center;
+ }

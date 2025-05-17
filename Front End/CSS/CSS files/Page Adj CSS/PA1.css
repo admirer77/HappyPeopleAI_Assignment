@@ -1,0 +1,42 @@
+/* Style for the body */
+body {
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+/* Style for the table */
+table {
+    border-collapse: collapse; /* Collapse borders so they don't double up */
+    width: 50%; /* Set table width */
+    margin: 20px auto; /* Center the table and add margin */
+    border: 2px solid black; /* Black border for the table */
+}
+
+/* Style for table headers and data cells */
+th, td {
+    border: 1px solid #ddd; /* Light grey border for cells */
+    padding: 10px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+}
+
+/* Style for table header */
+th {
+    background-color: #f2f2f2; /* Light grey background for header */
+}
+
+/* Style for alternating table rows */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Change body background color when hovering over the table */
+table:hover ~ body {
+    background-color: lightblue; /* Change to light blue on hover */
+}
+
+
+/* Let's change the table's background color on hover instead */
+table:hover {
+    background-color: #e0e0e0; /* Change table background on hover */
+}

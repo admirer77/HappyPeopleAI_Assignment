@@ -1,0 +1,68 @@
+.box {
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px; /* Center text vertically */
+}
+
+/* Visibility properties */
+.hidden {
+    visibility: hidden; /* Hides the element, but it still occupies space */
+    background-color: lightcoral;
+}
+
+.visible {
+    visibility: visible; /* Default value, element is visible */
+    background-color: lightgreen;
+}
+
+.collapse {
+     /* 'collapse' is primarily for table rows/columns.
+        For other elements, it often behaves like 'hidden'. */
+    visibility: collapse; /* Hides the element, often behaves like 'hidden' */
+    background-color: lightgoldenrodyellow;
+}
+
+/* Display properties */
+.display-none {
+    display: none; /* Hides the element completely, it does not occupy space */
+    background-color: lightblue;
+}
+
+.display-inline {
+    display: inline; /* Displays an element as an inline element (like <span>).
+                        Takes only necessary width, ignores height/width properties. */
+    background-color: lightsalmon;
+    padding: 5px; /* Padding works, but margin only works horizontally */
+}
+
+.display-block {
+    display: block; /* Displays an element as a block element (like <div>).
+                        Takes full width available, respects height/width properties. */
+    background-color: lightseagreen;
+}
+
+.display-contents {
+    display: contents; /* Makes the container disappear, its children become direct children
+                          of the container's parent. */
+    background-color: lightslategray; /* This background won't be visible */
+}
+
+.display-list-item {
+    display: list-item; /* Displays an element as a list item (like <li>).
+                           Adds a marker (bullet point by default). */
+    background-color: lightsteelblue;
+}
+
+/* Example for display: contents */
+.contents-parent {
+    border: 2px dashed purple;
+    padding: 10px;
+}
+.contents-child {
+     border: 1px solid orange;
+     margin: 5px;
+     padding: 5px;
+}

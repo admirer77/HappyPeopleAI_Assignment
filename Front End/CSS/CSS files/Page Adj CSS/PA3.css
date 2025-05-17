@@ -1,0 +1,65 @@
+body {
+    font-family: sans-serif;
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+}
+
+/* Apply smooth scrolling to the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+.content-section {
+    height: 80vh; /* Make sections tall to force scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    border-bottom: 1px solid #ccc;
+}
+
+#top {
+    background-color: #e0f7fa;
+}
+
+#middle1 {
+     background-color: #e1bee7;
+}
+
+ #middle2 {
+     background-color: #fff9c4;
+}
+
+#bottom {
+    background-color: #c8e6c9;
+}
+
+.nav-links {
+    position: fixed; /* Fix links position */
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure links are above content */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-links a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+ .nav-links a:hover {
+     text-decoration: underline;
+ }
+
+ /* Add an anchor target for the bottom */
+ #bottom-anchor {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     /* This element is just a target, it doesn't need to be visible */
+     visibility: hidden;
+ }

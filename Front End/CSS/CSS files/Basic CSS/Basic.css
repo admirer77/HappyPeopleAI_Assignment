@@ -1,0 +1,44 @@
+/* CSS for Page 1: Background Color and Image */
+body.page1 {
+    background-color: #f0f4c3; /* Light yellow background */
+    background-image: url('background.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Cover the entire viewport */
+    background-attachment: fixed; /* Fixed background, doesn't scroll */
+}
+
+/* CSS for Page 2: Different Borders */
+.page2 {
+    border-top: 5px solid red; /* Solid red top border */
+    border-right: 10px dashed blue; /* Dashed blue right border */
+    border-bottom: 3px dotted green; /* Dotted green bottom border */
+    border-left: 8px groove purple; /* Groove purple left border */
+    padding: 20px;
+    margin: 20px;
+}
+
+/* CSS for Page 3: Height and Width */
+.page3-element {
+    height: 80px;     /* Fixed height in pixels */
+    width: 75%;       /* Relative width as a percentage */
+    background-color: #b2ebf2;
+    margin-bottom: 20px;
+}
+.page3-container{
+  height: 250px;
+  width: 200px;
+  background-color: #80deea;
+}
+
+/* CSS for Page 4: Font Styles */
+.page4-heading {
+    font-family: 'Arial', sans-serif;  /* Arial or a generic sans-serif */
+    font-size: 24px;         /* 24 pixel font size */
+    color: #ff5722;          /* Orange color */
+    text-align: center;       /* Center-aligned text */
+}
+.page4-paragraph{
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    color: #00695c;
+    text-align: justify;
+}

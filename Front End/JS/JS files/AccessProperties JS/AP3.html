@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Counter</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            background-color: #e8f5e9;
+        }
+
+        #counterDisplay {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #2e7d32; /* Dark green */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4caf50; /* Green */
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #388e3c; /* Darker green */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Simple Counter</h1>
+
+    <div id="counterDisplay">0</div>
+
+    <button id="countButton">Count</button>
+
+    <script>
+        // Get the display element and the button
+        const counterDisplay = document.getElementById('counterDisplay');
+        const countButton = document.getElementById('countButton');
+
+        // Initialize the counter variable
+        let count = 0;
+
+        // Add a click event listener to the button
+        countButton.addEventListener('click', function() {
+            // Increment the counter
+            count++;
+            // Update the text content of the display element
+            counterDisplay.textContent = count;
+            console.log("Counter incremented to:", count);
+        });
+
+        console.log("Counter script loaded.");
+    </script>
+
+</body>
+</html>

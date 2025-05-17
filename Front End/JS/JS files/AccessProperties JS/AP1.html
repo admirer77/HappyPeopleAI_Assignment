@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Disappear</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh; /* Use min-height to center content vertically */
+            background-color: #f4f4f4;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="myButton">Click me to disappear!</button>
+
+    <script>
+        // Get the button element by its ID
+        const button = document.getElementById('myButton');
+
+        // Add a click event listener to the button
+        button.addEventListener('click', function() {
+            // Inside this function, 'this' refers to the element that triggered the event (the button)
+            console.log("Button clicked!");
+            console.log("Value of 'this' in the event handler:", this);
+
+            // Set the display style of the button to 'none' to hide it
+            this.style.display = 'none';
+        });
+
+        console.log("Script loaded. Click the button.");
+    </script>
+
+</body>
+</html>
