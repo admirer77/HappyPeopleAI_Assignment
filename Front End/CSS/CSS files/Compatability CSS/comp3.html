@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Types</title>
+    <link rel="stylesheet" href="comp3.css">
+</head>
+<body>
+
+    <h1>CSS Grid Layout Types</h1>
+
+    <h2>Basic Explicit Grid (3 columns, 2 rows)</h2>
+    <div class="grid-container grid-explicit">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
+        <div class="grid-item">Item 6</div>
+    </div>
+
+    <h2>Grid with Mixed Column Widths (Fixed, 1fr, 2fr)</h2>
+     <div class="grid-container grid-mixed-columns">
+        <div class="grid-item">Fixed (100px)</div>
+        <div class="grid-item">1fr</div>
+        <div class="grid-item">2fr</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
+        <div class="grid-item">Item 6</div>
+    </div>
+
+    <h2>Grid using <code>grid-template-areas</code></h2>
+     <div class="grid-container grid-areas">
+        <div class="grid-item item-header">Header Area</div>
+        <div class="grid-item item-sidebar">Sidebar Area</div>
+        <div class="grid-item item-content-1">Content Area 1</div>
+        <div class="grid-item item-content-2">Content Area 2</div>
+        <div class="grid-item item-footer">Footer Area</div>
+    </div>
+
+    <h2>Grid with <code>grid-auto-flow: row;</code> (Auto Columns)</h2>
+     <div class="grid-container grid-auto-flow-row">
+        <div class="grid-item">Auto Item 1</div>
+        <div class="grid-item">Auto Item 2</div>
+        <div class="grid-item">Auto Item 3</div>
+        <div class="grid-item">Auto Item 4</div>
+        <div class="grid-item">Auto Item 5</div>
+        <div class="grid-item">Auto Item 6</div>
+        <div class="grid-item">Auto Item 7</div>
+        <div class="grid-item">Auto Item 8</div>
+         <div class="grid-item">Auto Item 9</div>
+         <div class="grid-item">Auto Item 10</div>
+    </div>
+
+     <h2>Grid with <code>grid-auto-flow: column;</code> (Auto Rows)</h2>
+     <div class="grid-container grid-auto-flow-column">
+        <div class="grid-item">Col Item 1</div>
+        <div class="grid-item">Col Item 2</div>
+        <div class="grid-item">Col Item 3</div>
+        <div class="grid-item">Col Item 4</div>
+        <div class="grid-item">Col Item 5</div>
+        <div class="grid-item">Col Item 6</div>
+        <div class="grid-item">Col Item 7</div>
+        <div class="grid-item">Col Item 8</div>
+         <div class="grid-item">Col Item 9</div>
+         <div class="grid-item">Col Item 10</div>
+    </div>
+
+
+</body>
+</html>

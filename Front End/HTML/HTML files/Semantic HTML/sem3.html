@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Semantic Tags</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            background-color: #e1f5fe; /* Light blue background */
+            color: #333;
+        }
+
+        /* Basic layout and styling for semantic elements */
+        header {
+            background-color: #0288d1; /* Blue */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        hgroup {
+            margin-bottom: 10px; /* Space below hgroup */
+        }
+
+        nav {
+            background-color: #4fc3f7; /* Lighter blue */
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #01579b; /* Dark blue */
+            font-weight: bold;
+        }
+
+        section {
+            background-color: #ffffff; /* White background */
+            padding: 20px;
+            margin: 0 20px 20px 20px; /* Margin on sides and bottom */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        article {
+             border-bottom: 1px dashed #b0bec5; /* Light grey dashed border */
+             padding-bottom: 15px;
+             margin-bottom: 15px;
+        }
+
+        article:last-child {
+            border-bottom: none; /* No border on the last article */
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        aside {
+            background-color: #b0bec5; /* Light grey */
+            padding: 15px;
+            margin: 0 20px 20px 20px; /* Margin on sides and bottom */
+            border-radius: 8px;
+            font-style: italic;
+            color: #37474f; /* Dark grey */
+        }
+
+        figure {
+            margin: 20px 0; /* Margin around figure */
+            text-align: center;
+        }
+
+        figcaption {
+            margin-top: 5px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        mark {
+            background-color: yellow; /* Default highlight color */
+            padding: 2px 4px;
+        }
+
+        footer {
+            background-color: #0288d1; /* Blue */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        time {
+            font-style: italic;
+            color: #01579b; /* Dark blue */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <hgroup>
+            <h1>Website Title</h1>
+            <h2>Website Subtitle or Tagline</h2>
+        </hgroup>
+    </header>
+
+    <nav>
+        <a href="#section1">Section 1</a>
+        <a href="#section2">Section 2</a>
+        <a href="#aside-content">Related Content</a>
+    </nav>
+
+    <section id="section1">
+        <h2>Section One</h2>
+        <p>This is the first section of the main content.</p>
+
+        <article>
+            <h3>Article Title 1</h3>
+            <p>Published on: <time datetime="2023-10-26T10:00:00Z">October 26, 2023</time></p>
+            <p>
+                Content of the first article. This is a standalone piece that could be
+                distributed independently.
+            </p>
+        </article>
+
+        <article>
+            <h3>Article Title 2</h3>
+             <p>Published on: <time datetime="2023-10-25">Yesterday</time></p>
+            <p>
+                Content of the second article. You can use the <code>&lt;time&gt;</code> tag
+                to represent a specific period in time.
+            </p>
+        </article>
+    </section>
+
+    <section id="section2">
+        <h2>Section Two</h2>
+        <p>This is the second section of the main content.</p>
+
+        <figure>
+            <img src="https://placehold.co/400x200/cccccc/333333?text=Placeholder+Image" alt="A simple placeholder image">
+            <figcaption>A simple placeholder image demonstrating the use of <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>.</figcaption>
+        </figure>
+
+        <p>
+            You can use the <mark>mark tag</mark> to highlight text that is of particular
+            relevance in the surrounding context.
+        </p>
+    </section>
+
+    <aside id="aside-content">
+        <h3>Related Links</h3>
+        <p>This aside contains content related to the main page, like links or advertisements.</p>
+        <ul>
+            <li><a href="#">Related Article 1</a></li>
+            <li><a href="#">Related Article 2</a></li>
+        </ul>
+    </aside>
+
+    <footer>
+        <p>&copy; <time datetime="2023">2023</time> HTML5 Semantic Demo</p>
+        <p>Contact: info@example.com</p>
+    </footer>
+
+</body>
+</html>

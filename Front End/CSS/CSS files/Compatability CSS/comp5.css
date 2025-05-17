@@ -1,0 +1,141 @@
+
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #e3f2fd; /* Light blue */
+}
+
+h1 {
+    color: #0d47a1; /* Dark blue */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #1565c0; /* Blue */
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* --- Viewport Units --- */
+/* vw (viewport width): 1vw = 1% of the viewport width */
+/* vh (viewport height): 1vh = 1% of the viewport height */
+/* vmin (viewport minimum): 1vmin = 1% of the smaller dimension (width or height) */
+/* vmax (viewport maximum): 1vmax = 1% of the larger dimension (width or height) */
+
+.viewport-text {
+    font-size: 3vw; /* Font size is 3% of the viewport width */
+    text-align: center;
+    margin-bottom: 20px;
+    color: #01579b; /* Dark blue */
+}
+
+.viewport-box {
+    width: 50vw; /* Width is 50% of the viewport width */
+    height: 20vh; /* Height is 20% of the viewport height */
+    background-color: #bbdefb; /* Light blue */
+    margin: 20px auto; /* Center the box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #1976d2; /* Blue border */
+    border-radius: 8px;
+}
+
+/* --- Responsive Grid using Media Queries --- */
+.responsive-grid {
+    display: grid;
+    gap: 10px;
+    padding: 15px;
+    border: 2px dashed #2196f3; /* Blue dashed border */
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 30px;
+
+    /* Default grid for larger screens */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+}
+
+.responsive-grid-item {
+    background-color: #90caf9; /* Lighter blue */
+    border: 1px solid #2196f3; /* Blue border */
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* --- Responsive Image --- */
+.responsive-image {
+    max-width: 100%; /* Image will not exceed its container's width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below image */
+    margin: 20px auto; /* Center the image */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+    /* --- Responsive Video --- */
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+        margin: 20px auto;
+        max-width: 800px; /* Max width for the video container */
+    }
+
+    .video-container iframe,
+    .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+
+
+/* --- Media Queries --- */
+
+/* Styles for screens smaller than 768px */
+@media (max-width: 768px) {
+    body {
+        margin: 10px; /* Reduce margin on smaller screens */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Reduce heading size */
+    }
+
+        .viewport-text {
+            font-size: 4vw; /* Make font slightly larger relative to smaller viewport */
+        }
+
+    .responsive-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+/* Styles for screens smaller than 480px (e.g., mobile phones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .viewport-text {
+            font-size: 5vw; /* Make font even larger relative to very small viewport */
+        }
+
+    .viewport-box {
+            width: 80vw; /* Make box wider on small screens */
+            height: 15vh;
+    }
+
+    .responsive-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .responsive-grid-item {
+        padding: 10px; /* Reduce padding */
+    }
+}

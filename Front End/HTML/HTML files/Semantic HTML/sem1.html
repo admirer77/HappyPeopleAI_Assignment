@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Semantic Elements</title>
+    <style>
+        /* Basic styling for demonstration */
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+
+        /* Style for div elements */
+        .container {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        .header-div {
+            background-color: #e9e9e9;
+            padding: 10px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .content-div {
+            margin-bottom: 15px;
+        }
+
+        .footer-div {
+            background-color: #e9e9e9;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        /* Style for span elements */
+        .highlight-span {
+            color: blue;
+            font-weight: bold;
+        }
+
+        .small-text-span {
+            font-size: 0.8em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header-div">
+            Website Header (using div)
+        </div>
+
+        <div class="content-div">
+            <h2>Main Content Section (using div)</h2>
+            <p>
+                This is a paragraph within a <span class="highlight-span">content div</span>.
+                We are using <span class="small-text-span">span elements</span> to apply styles
+                to specific parts of the text without affecting the block structure.
+            </p>
+            <div class="container">
+                <h3>Another nested div</h3>
+                <p>This div is nested inside the main content div.</p>
+            </div>
+        </div>
+
+        <div class="footer-div">
+            Website Footer (using div) - <span class="small-text-span">&copy; 2023 Non-Semantic Demo</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Another Section (using div)</h2>
+        <p>This is completely structured using only div and span elements.</p>
+    </div>
+
+</body>
+</html>

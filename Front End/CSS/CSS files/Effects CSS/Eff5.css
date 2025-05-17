@@ -1,0 +1,51 @@
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background-color: #e0f2f7; /* Light blue background */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #01579b; /* Dark blue */
+    margin-bottom: 30px;
+}
+
+.image-container {
+    margin: 20px;
+    background-color: #ffffff; /* Background to show the opacity effect */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.image-with-opacity {
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto;
+    border-radius: 4px;
+
+    /* --- Opacity Property --- */
+    opacity: 0.6; /* Value between 0.0 (fully transparent) and 1.0 (fully opaque) */
+
+    /* Optional: Add transition for smooth opacity change on hover */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Optional: Change opacity on hover */
+.image-with-opacity:hover {
+    opacity: 1.0; /* Become fully opaque on hover */
+}
+
+/* Example with different opacity */
+.image-low-opacity {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+        opacity: 0.3; /* Lower opacity */
+        margin-top: 20px;
+}

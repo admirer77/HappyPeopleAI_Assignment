@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Cookies</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #e8f5e9; /* Light green */
+        }
+
+        h1 {
+            color: #1b5e20; /* Dark green */
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4caf50; /* Green */
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #388e3c; /* Darker green */
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #a5d6a7; /* Light green border */
+            background-color: #c8e6c9; /* Lighter green */
+            border-radius: 5px;
+            min-height: 50px; /* Reserve space */
+        }
+
+        pre {
+            background-color: #eee;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-top: 20px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+         code {
+             font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+             background-color: #dcedc8; /* Very light green */
+             padding: 2px 5px;
+             border-radius: 3px;
+         }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Cookie Functions</h1>
+
+    <p>Use the buttons below to interact with a simple cookie.</p>
+
+    <button onclick="setMyCookie()">Set "username" Cookie</button>
+    <button onclick="getMyCookie()">Get "username" Cookie</button>
+    <button onclick="checkMyCookie()">Check if "username" Cookie Exists</button>
+
+    <h2>Output:</h2>
+    <div id="output">
+        </div>
+
+
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            // document.cookie is the API for interacting with cookies
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            console.log("Cookie set:", name, "=", value);
+             document.getElementById('output').innerHTML += '<p>Cookie "' + name + '" set.</p>';
+        }
+
+        // Function to get a cookie by its name
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            // document.cookie contains all cookies as a single string
+            const ca = document.cookie.split(';'); // Split into individual cookies
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length); // Remove leading spaces
+                if (c.indexOf(nameEQ) === 0) {
+                     const cookieValue = c.substring(nameEQ.length, c.length);
+                     console.log("Cookie found:", name, "=", cookieValue);
+                     return cookieValue; // Return the value if found
+                }
+            }
+            console.log("Cookie not found:", name);
+            return null; // Return null if not found
+        }
+
+        // Function to check if a cookie exists
+        function checkCookie(name) {
+            const cookie = getCookie(name); // Use the getCookie function
+            if (cookie !== null) {
+                console.log("Cookie exists:", name);
+                document.getElementById('output').innerHTML += '<p>Cookie "' + name + '" exists.</p>';
+                return true;
+            } else {
+                console.log("Cookie does NOT exist:", name);
+                 document.getElementById('output').innerHTML += '<p>Cookie "' + name + '" does NOT exist.</p>';
+                return false;
+            }
+        }
+
+        // --- Example Usage Functions (called by buttons) ---
+
+        function setMyCookie() {
+            setCookie("username", "JohnDoe", 7); // Set cookie named "username" with value "JohnDoe" for 7 days
+        }
+
+        function getMyCookie() {
+            const username = getCookie("username");
+            if (username !== null) {
+                document.getElementById('output').innerHTML += '<p>Retrieved cookie "username": ' + username + '</p>';
+            } else {
+                 document.getElementById('output').innerHTML += '<p>Cookie "username" not found when getting.</p>';
+            }
+        }
+
+        function checkMyCookie() {
+            checkCookie("username"); // This function already updates the output div
+        }
+
+        // Optional: Function to delete a cookie (by setting its expiry date in the past)
+        function deleteCookie(name) {
+            setCookie(name, "", -1); // Set expiry to -1 days (in the past)
+            console.log("Cookie deleted:", name);
+             document.getElementById('output').innerHTML += '<p>Cookie "' + name + '" deleted.</p>';
+        }
+
+        console.log("Cookie script loaded.");
+    </script>
+
+</body>
+</html>

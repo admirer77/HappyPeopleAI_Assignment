@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            background-color: #e0f7fa; /* Light cyan */
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #006064; /* Dark cyan */
+            margin-bottom: 30px;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px; /* Limit form width */
+        }
+
+        div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #004d40; /* Dark green-cyan */
+        }
+
+        input[type="text"] {
+            width: calc(100% - 22px); /* Adjust for padding and border */
+            padding: 10px;
+            border: 1px solid #b2dfdb; /* Light cyan border */
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        button {
+            width: 100%; /* Full width button */
+            padding: 10px;
+            font-size: 1.1em;
+            background-color: #00bcd4; /* Cyan */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #00acc1; /* Darker cyan */
+        }
+
+        .error-message {
+            color: #d32f2f; /* Red */
+            font-size: 0.9em;
+            margin-top: 5px;
+            min-height: 1.2em; /* Reserve space */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Form Validation</h1>
+
+    <form id="myForm">
+        <div>
+            <label for="myTextbox">Enter something:</label>
+            <input type="text" id="myTextbox" name="myTextbox">
+            <div id="textboxError" class="error-message"></div>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <script>
+        // Get the form, the textbox, and the error message div
+        const myForm = document.getElementById('myForm');
+        const myTextbox = document.getElementById('myTextbox');
+        const textboxError = document.getElementById('textboxError');
+
+        // Add an event listener for the 'submit' event on the form
+        myForm.addEventListener('submit', function(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            console.log("Form submit attempted.");
+
+            // Get the value from the textbox and trim whitespace
+            const textboxValue = myTextbox.value.trim();
+
+            // Check if the textbox value is empty
+            if (textboxValue === "") {
+                // If empty, display an error message
+                textboxError.textContent = "This field cannot be empty.";
+                console.log("Validation failed: Textbox is empty.");
+            } else {
+                // If not empty, clear any previous error message
+                textboxError.textContent = "";
+                console.log("Validation successful: Textbox is not empty.");
+
+                // In a real application, you would now submit the form
+                // or perform other actions, e.g., using fetch() or form.submit().
+                // For this example, we'll just log success.
+                alert("Form submitted successfully (simulated)!");
+                // To actually submit the form after validation:
+                // myForm.submit();
+            }
+        });
+
+        console.log("Form validation script loaded.");
+    </script>
+
+</body>
+</html>

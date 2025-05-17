@@ -1,0 +1,109 @@
+
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #e0f7fa; /* Light blue background */
+}
+
+h1, h2 {
+    color: #0077c2; /* Blue */
+    text-align: center;
+}
+
+/* --- CSS Animation Example --- */
+.animated-box {
+    width: 100px;
+    height: 100px;
+    background-color: #ff9800; /* Orange */
+    margin: 50px auto; /* Center the box */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+
+    /* Animation Properties */
+    animation-name: pulse; /* Name of the @keyframes rule */
+    animation-duration: 2s; /* How long the animation takes */
+    animation-iteration-count: infinite; /* How many times it runs (infinite, a number, etc.) */
+    animation-delay: 0s; /* Delay before the animation starts */
+    animation-timing-function: ease-in-out; /* Speed curve of the animation */
+}
+
+/* Define the keyframes for the animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Start at normal size */
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1); /* Scale up */
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1); /* Return to normal size */
+        opacity: 1;
+    }
+}
+
+/* --- Pagination Examples --- */
+.pagination {
+    list-style: none; /* Remove default list bullets */
+    padding: 0;
+    margin: 40px auto; /* Center the pagination */
+    display: flex; /* Arrange items in a row */
+    justify-content: center; /* Center the items horizontally */
+}
+
+.pagination li {
+    margin: 0 5px; /* Space between items */
+}
+
+.pagination a {
+    display: block; /* Make the link a block element */
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #0077c2; /* Blue text */
+    border: 1px solid #0077c2; /* Blue border */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hoverable Pagination */
+.pagination.hoverable a:hover {
+    background-color: #0077c2; /* Blue background on hover */
+    color: white; /* White text on hover */
+    border-color: #005fa8; /* Darker blue border on hover */
+}
+
+/* Active/Current page style */
+.pagination a.active {
+    background-color: #0077c2;
+    color: white;
+    border-color: #005fa8;
+    font-weight: bold;
+}
+
+/* Pagination without spaces (adjust margin) */
+.pagination.no-spaces li {
+    margin: 0; /* Remove space between items */
+}
+
+.pagination.no-spaces a {
+        border-radius: 0; /* Remove rounded corners */
+        border-right: none; /* Remove right border to make them connect */
+}
+
+.pagination.no-spaces li:first-child a {
+    border-top-left-radius: 5px; /* Add rounded corner to first item */
+    border-bottom-left-radius: 5px;
+}
+
+    .pagination.no-spaces li:last-child a {
+    border-top-right-radius: 5px; /* Add rounded corner to last item */
+    border-bottom-right-radius: 5px;
+    border-right: 1px solid #0077c2; /* Add back the right border for the last item */
+}
+

@@ -1,0 +1,65 @@
+
+body {
+    font-family: sans-serif;
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+}
+
+.hero-section {
+    /* --- Hero Image Styling --- */
+    background: url('https://placehold.co/1200x600/42a5f5/ffffff?text=Hero+Image') no-repeat center center; /* Placeholder image, centered, no repeat */
+    background-size: cover; /* Cover the entire section */
+    height: 60vh; /* Set a height relative to the viewport height */
+    position: relative; /* Needed for absolute positioning of content */
+    color: white; /* Text color for content */
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    /* Content overlaying the image */
+    z-index: 2; /* Ensure content is above the overlay */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background for readability */
+    border-radius: 8px;
+}
+
+.hero-section h1 {
+    margin-top: 0;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9800; /* Orange button */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #f57c00; /* Darker orange on hover */
+}
+
+
+/* Add some content below the hero section */
+.main-content {
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+.main-content h2 {
+    color: #333;
+}

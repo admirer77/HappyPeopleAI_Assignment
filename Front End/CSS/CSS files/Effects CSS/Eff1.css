@@ -1,0 +1,55 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background-color: #f4f7f6; /* Light background */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.image-container {
+    /* Container to hold the image and apply shadow/hover effects */
+    display: inline-block; /* Allows the container to wrap the image */
+    margin: 20px;
+    padding: 10px; /* Optional padding inside the shadow area */
+    background-color: #fff; /* Background for the shadow to stand out */
+    border-radius: 8px; /* Rounded corners for the container */
+
+    /* Default Box Shadow */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Horizontal offset, vertical offset, blur radius, spread radius (optional), color */
+
+    /* Smooth transition for shadow and transform on hover */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.image-container img {
+    display: block; /* Remove extra space below the image */
+    max-width: 100%; /* Ensure image is responsive within container */
+    height: auto;
+    border-radius: 4px; /* Slightly less rounded corners for the image itself */
+}
+
+/* Shadow and transform effect on hover */
+.image-container:hover {
+    /* New shadow on hover */
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
+
+    /* Optional: Slightly scale up the image on hover */
+    transform: scale(1.05);
+}
+
+/* Example of text shadow */
+.text-shadow-example {
+    text-shadow: 2px 2px 4px #777777; /* Horizontal offset, vertical offset, blur radius, color */
+    margin-top: 40px;
+    font-size: 1.5em;
+    color: #555;
+}

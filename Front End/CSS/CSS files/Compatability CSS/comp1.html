@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Layout: fixed vs auto</title>
+    <link rel="stylesheet" href="comp1.css">
+</head>
+<body>
+
+    <h1>Table Layout: <code>fixed</code> vs <code>auto</code></h1>
+
+    <h2><code>table-layout: auto;</code> (Default Behavior)</h2>
+    <table class="layout-auto">
+        <caption>Table with <code>table-layout: auto;</code></caption>
+        <thead>
+            <tr>
+                <th>Short Header</th>
+                <th>A Header with Slightly Longer Text</th>
+                <th>Another Header</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2 with some extra words</td>
+                <td>Data 3</td>
+            </tr>
+            <tr>
+                <td>Data 4</td>
+                <td><span class="long-content">This cell has a very long piece of content that will influence the column width in 'auto' layout.</span></td>
+                <td>Data 6</td>
+            </tr>
+             <tr>
+                <td>Data 7</td>
+                <td>Data 8</td>
+                <td>Data 9 with more text</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2><code>table-layout: fixed;</code></h2>
+     <table class="layout-fixed">
+        <caption>Table with <code>table-layout: fixed;</code></caption>
+        <thead>
+            <tr>
+                <th>Short Header</th>
+                <th>A Header with Slightly Longer Text</th>
+                <th>Another Header</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2 with some extra words</td>
+                <td>Data 3</td>
+            </tr>
+            <tr>
+                <td>Data 4</td>
+                <td><span class="long-content">This cell has a very long piece of content that will be truncated in 'fixed' layout.</span></td>
+                <td>Data 6</td>
+            </tr>
+             <tr>
+                <td>Data 7</td>
+                <td>Data 8</td>
+                <td>Data 9 with more text</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>In the <code>auto</code> layout, the second column expands to fit the long content. In the <code>fixed</code> layout, the column widths are determined by the table width and the first row, and the long content is truncated (due to <code>overflow: hidden;</code> and <code>text-overflow: ellipsis;</code>).</p>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning</title>
+    <link rel="stylesheet" href="Eff3.css">
+</head>
+<body>
+
+    <h1>CSS Positioning</h1>
+
+    <p>Scroll down to see the fixed and sticky boxes in action.</p>
+
+    <div class="position-container">
+        <h2>Static Positioning</h2>
+        <p>This box has <code>position: static;</code> (the default). It's in the normal document flow.</p>
+        <div class="position-box static-box">Static Box</div>
+        <p>Content after the static box.</p>
+    </div>
+
+    <div class="position-container">
+        <h2>Relative Positioning</h2>
+        <p>This box has <code>position: relative;</code> and is shifted from its normal position. The space it would normally occupy is still reserved.</p>
+        <div class="position-box relative-box">Relative Box</div>
+        <p>Content after the relative box (notice the gap).</p>
+    </div>
+
+    <div class="position-container">
+        <h2>Absolute Positioning</h2>
+        <p>This box has <code>position: absolute;</code> and is positioned relative to its nearest positioned ancestor (the dashed container). It's removed from the normal flow.</p>
+        <div class="position-box absolute-box">Absolute Box</div>
+        <p>Content after the absolute box (no gap left).</p>
+    </div>
+
+    <div class="long-content">
+        Scroll down further!
+    </div>
+
+    <div class="sticky-box">
+        I'm a sticky box! I'll stick to the top when you scroll.
+    </div>
+
+    <div class="long-content" style="background-color: #e8f5e9;">
+         Keep scrolling!
+    </div>
+
+    <div class="position-container">
+        <h2>Fixed Positioning</h2>
+        <p>Look at the bottom right corner. That box has <code>position: fixed;</code> and stays in place relative to the viewport.</p>
+        </div>
+
+    <div class="position-box fixed-box">Fixed Box</div>
+
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+
+body {
+    font-family: sans-serif;
+    margin: 40px; /* Add some margin to see fixed/sticky easily */
+    background-color: #fff3e0; /* Light orange background */
+    min-height: 200vh; /* Make body tall to demonstrate sticky/fixed */
+}
+
+h1 {
+    text-align: center;
+    color: #e65100; /* Dark orange */
+    margin-bottom: 30px;
+}
+
+.position-container {
+    border: 2px dashed #ff9800; /* Orange dashed border */
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    position: relative; /* Make this container a positioning context for absolute children */
+}
+
+.position-box {
+    width: 100px;
+    height: 50px;
+    background-color: #ffb74d; /* Lighter orange */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f57c00; /* Orange border */
+    margin: 10px; /* Default margin */
+    border-radius: 5px;
+}
+
+/* --- Positioning Examples --- */
+
+/* static: Default position. Elements render in normal flow.
+            top, bottom, left, right, z-index have no effect. */
+.static-box {
+    position: static;
+    background-color: #c8e6c9; /* Light green */
+    border-color: #388e3c; /* Green */
+}
+
+/* relative: Positioned relative to its normal position.
+                top, bottom, left, right, z-index *do* work.
+                Leaves a gap in the normal flow where it would have been. */
+.relative-box {
+    position: relative;
+    top: 20px; /* Move 20px down from its normal position */
+    left: 20px; /* Move 20px right from its normal position */
+    background-color: #bbdefb; /* Light blue */
+    border-color: #1976d2; /* Blue */
+}
+
+/* absolute: Positioned relative to its nearest positioned ancestor
+                (an ancestor with position other than static).
+                If no positioned ancestor, it's relative to the initial containing block (viewport/html).
+                Removed from the normal flow. Other elements behave as if it's not there. */
+.absolute-box {
+    position: absolute;
+    top: 50px; /* Position 50px from the top of the *positioned container* */
+    right: 20px; /* Position 20px from the right of the *positioned container* */
+    background-color: #ffcdd2; /* Light red */
+    border-color: #d32f2f; /* Red */
+    z-index: 1; /* Bring it forward if overlapping */
+}
+
+/* fixed: Positioned relative to the viewport.
+            Remains in the same position even when the page scrolls.
+            Removed from the normal flow. */
+.fixed-box {
+    position: fixed;
+    bottom: 20px; /* 20px from the bottom of the viewport */
+    right: 20px; /* 20px from the right of the viewport */
+    background-color: #fff9c4; /* Light yellow */
+    border-color: #fbc02d; /* Yellow */
+    z-index: 100; /* Ensure it's on top */
+}
+
+/* sticky: Positioned based on the user's scroll position.
+            Behaves like relative until a certain scroll point, then becomes fixed.
+            Requires a threshold (top, bottom, left, or right). */
+.sticky-box {
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport when it reaches this point */
+    background-color: #d1c4e9; /* Light purple */
+    border-color: #5e35b1; /* Purple */
+    z-index: 10; /* Ensure it's above normal content */
+    padding: 10px; /* Add padding to the sticky element */
+    text-align: center;
+    width: 100%; /* Ensure it spans the width */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Add some content to make the page scrollable */
+.long-content {
+    height: 100vh; /* Add tall content */
+    background-color: #e0f2f7; /* Very light blue */
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: #01579b;
+}

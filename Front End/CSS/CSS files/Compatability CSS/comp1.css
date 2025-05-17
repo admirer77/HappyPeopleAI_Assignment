@@ -1,0 +1,69 @@
+
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #fce4ec; /* Light pink */
+}
+
+h1 {
+    color: #880e4f; /* Dark pink */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 80%; /* Set a width for the table */
+    border-collapse: collapse;
+    margin: 20px auto; /* Center the table */
+    border: 2px solid #e91e63; /* Pink border */
+}
+
+th, td {
+    border: 1px solid #f48fb1; /* Lighter pink border */
+    padding: 10px;
+    text-align: left;
+    overflow: hidden; /* Hide overflow if content is too long */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+    white-space: nowrap; /* Prevent text wrapping in cells */
+}
+
+th {
+    background-color: #e91e63; /* Pink background for header */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f8bbd0; /* Very light pink for even rows */
+}
+
+/* --- Table Layout Property --- */
+
+/* table-layout: auto (This is the default)
+Column widths are based on the content within the cells.
+Wider content in a cell can make the column wider. */
+table.layout-auto {
+    table-layout: auto;
+    caption-side: bottom; /* Add caption below */
+}
+
+/* table-layout: fixed
+Column widths are based on the width of the table and the width of the first row's cells.
+Content that overflows is clipped or handled by overflow property.
+Faster rendering for large tables. */
+table.layout-fixed {
+    table-layout: fixed;
+    caption-side: bottom; /* Add caption below */
+}
+
+caption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #4a148c; /* Dark purple */
+}
+
+/* Add a class for content that is intentionally long */
+.long-content {
+    width: 200px; /* Give the content a width to test overflow */
+    display: inline-block; /* Make it inline-block to respect width */
+}
+

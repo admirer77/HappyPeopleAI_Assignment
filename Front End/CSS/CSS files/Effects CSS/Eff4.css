@@ -1,0 +1,39 @@
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background-color: #eceff1; /* Light grey background */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #37474f; /* Dark grey */
+    margin-bottom: 30px;
+}
+
+.overflow-box {
+    width: 300px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    border: 2px solid #546e7a; /* Grey border */
+    padding: 15px;
+    margin: 20px;
+    background-color: #ffffff; /* White background */
+    border-radius: 8px;
+
+    /* --- Overflow Property --- */
+    overflow: scroll; /* Add scrollbars if content overflows both horizontally and vertically */
+    /* Other values:
+        visible (default): Content overflows outside the box.
+        hidden: Content is clipped and hidden.
+        auto: Scrollbars are added only if necessary.
+        overflow-x: scroll; (for horizontal only)
+        overflow-y: scroll; (for vertical only)
+    */
+
+    line-height: 1.6; /* Improve readability */
+}

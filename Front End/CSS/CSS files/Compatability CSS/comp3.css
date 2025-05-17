@@ -1,0 +1,84 @@
+
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #e8f5e9; /* Light green */
+}
+
+h1 {
+    color: #1b5e20; /* Dark green */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+        color: #2e7d32; /* Green */
+        margin-top: 30px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #a5d6a7; /* Light green border */
+        padding-bottom: 5px;
+}
+
+.grid-container {
+    display: grid; /* Make the container a grid */
+    gap: 10px; /* Space between grid items */
+    padding: 15px;
+    border: 2px dashed #4caf50; /* Green dashed border */
+    background-color: #ffffff; /* White background */
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.grid-item {
+    background-color: #a5d6a7; /* Light green item background */
+    border: 1px solid #4caf50; /* Green item border */
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* --- Grid Type Examples --- */
+
+/* Example 1: Basic Grid with Explicit Columns and Rows */
+.grid-explicit {
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal-width columns (using fr unit) */
+    grid-template-rows: auto auto; /* Rows height based on content */
+}
+
+/* Example 2: Grid with Fixed and Flexible Columns */
+.grid-mixed-columns {
+    grid-template-columns: 100px 1fr 2fr; /* Fixed 100px, then 1 part, then 2 parts of remaining space */
+        grid-template-rows: auto auto;
+}
+
+/* Example 3: Grid using grid-template-areas */
+.grid-areas {
+    grid-template-areas:
+        "header header header"
+        "sidebar content content"
+        "footer footer footer";
+    grid-template-columns: 150px 1fr 1fr; /* Sidebar width, then two equal content columns */
+    grid-template-rows: auto 1fr auto; /* Header height, content takes remaining height, footer height */
+    min-height: 300px; /* Give container a height to see row distribution */
+}
+
+/* Assign grid items to named areas */
+.item-header { grid-area: header; background-color: #81c784; } /* Darker green */
+.item-sidebar { grid-area: sidebar; background-color: #c8e6c9; } /* Very light green */
+.item-content-1 { grid-area: content; } /* Both content items go to the 'content' area */
+.item-content-2 { grid-area: content; }
+.item-footer { grid-area: footer; background-color: #81c784; }
+
+/* Example 4: Grid with grid-auto-flow */
+.grid-auto-flow-row {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Create as many columns as fit, min 100px, max 1fr */
+    grid-auto-flow: row; /* Items flow into rows (default) */
+}
+
+    .grid-auto-flow-column {
+    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr)); /* Create as many rows as fit, min 50px, max 1fr */
+    grid-auto-flow: column; /* Items flow into columns */
+    max-height: 200px; /* Limit height to force column overflow/scrolling if needed */
+    overflow-x: auto; /* Add horizontal scroll if columns overflow */
+    }
+

@@ -1,0 +1,79 @@
+
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #e1f5fe; /* Light blue */
+}
+
+h1 {
+    color: #01579b; /* Dark blue */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+        color: #0288d1; /* Blue */
+        margin-top: 25px;
+        margin-bottom: 10px;
+}
+
+ul, ol {
+    margin-bottom: 20px;
+    padding-left: 40px; /* Default padding */
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* --- List Style Type Examples --- */
+
+/* Unordered Lists (ul) */
+.list-disc {
+    list-style-type: disc; /* Default for ul */
+}
+
+.list-circle {
+    list-style-type: circle;
+}
+
+.list-square {
+    list-style-type: square;
+}
+
+.list-none {
+    list-style-type: none; /* No marker */
+    padding-left: 0; /* Remove padding if no marker */
+}
+
+/* Ordered Lists (ol) */
+.list-decimal {
+    list-style-type: decimal; /* Default for ol (1, 2, 3...) */
+}
+
+.list-decimal-leading-zero {
+    list-style-type: decimal-leading-zero; /* (01, 02, 03...) */
+}
+
+.list-lower-alpha {
+    list-style-type: lower-alpha; /* (a, b, c...) */
+}
+
+.list-upper-alpha {
+    list-style-type: upper-alpha; /* (A, B, C...) */
+}
+
+.list-lower-roman {
+    list-style-type: lower-roman; /* (i, ii, iii...) */
+}
+
+.list-upper-roman {
+    list-style-type: upper-roman; /* (I, II, III...) */
+}
+
+/* You can also use list-style-image to use an image as the marker */
+    .list-image {
+    list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="%230077c2"/></svg>'); /* Blue circle SVG */
+    list-style-position: outside; /* Position marker outside the list item */
+    }
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Date and Time</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            background-color: #f3e5f5; /* Light purple */
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #4a148c; /* Dark purple */
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #9c27b0; /* Purple */
+            color: white;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            background-color: #7b1fa2; /* Darker purple */
+        }
+
+        button:active {
+            transform: scale(0.98);
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        #datetimeDisplay {
+            font-size: 1.5em;
+            color: #6a1b9a; /* Medium purple */
+            min-height: 1.5em; /* Reserve space to prevent layout shift */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Display Current Date and Time</h1>
+
+    <button id="showDatetimeButton">Show Date and Time</button>
+
+    <div id="datetimeDisplay">
+        </div>
+
+    <script>
+        // Get the button and the display area
+        const showButton = document.getElementById('showDatetimeButton');
+        const displayDiv = document.getElementById('datetimeDisplay');
+
+        // Add an event listener for the 'click' event on the button
+        showButton.addEventListener('click', function() {
+            // Create a new Date object, which represents the current date and time
+            const now = new Date();
+
+            // You can format the date and time in various ways.
+            // toLocaleString() provides a human-readable format based on locale.
+            const formattedDatetime = now.toLocaleString();
+
+            // Update the text content of the display div
+            displayDiv.textContent = "Current Date and Time: " + formattedDatetime;
+
+            console.log("Button clicked. Displaying:", formattedDatetime);
+        });
+
+        console.log("Script loaded. Click the button to see the date and time.");
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Elements</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #e8f5e9; /* Light green background */
+        }
+
+        h1, h2 {
+            color: #1b5e20; /* Dark green */
+        }
+
+        /* Style for article */
+        article {
+            border: 1px solid #a5d6a7; /* Green border */
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #ffffff; /* White background */
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Style for table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #4caf50; /* Green border */
+        }
+
+        th, td {
+            border: 1px solid #a5d6a7; /* Lighter green border */
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50; /* Green background for header */
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #e8f5e9; /* Light green for even rows */
+        }
+
+        /* Style for form */
+        form {
+            border: 1px solid #a1887f; /* Brown border */
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #efebe9; /* Light brown background */
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block; /* Make labels block elements */
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #3e2723; /* Dark brown */
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: calc(100% - 22px); /* Adjust width considering padding and border */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #d7ccc8; /* Lighter brown border */
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #6d4c41; /* Brown */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #4e342e; /* Darker brown */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Semantic Elements Example</h1>
+
+    <article>
+        <h2>Blog Post Title</h2>
+        <p>By John Doe | <time datetime="2023-10-26">October 26, 2023</time></p>
+        <p>
+            This is the content of a blog post. The <code>&lt;article&gt;</code> element is used
+            to represent a self-contained composition in a document, page, application, or site,
+            which is intended to be independently distributable or reusable (e.g., in syndication).
+        </p>
+        <p>It could be a forum post, a magazine or newspaper article, a blog entry,
+           a user-submitted comment, an interactive widget or gadget, or any other
+           independent item of content.</p>
+    </article>
+
+    <form action="/submit-form" method="post">
+        <h2>Contact Us</h2>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <div>
+            <button type="submit">Send Message</button>
+        </div>
+    </form>
+
+    <h2>Product Inventory</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Laptop</td>
+                <td>15</td>
+                <td>$1200</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Keyboard</td>
+                <td>50</td>
+                <td>$75</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Mouse</td>
+                <td>100</td>
+                <td>$25</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total Items:</td>
+                <td>165</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
